@@ -24,6 +24,32 @@ summary(dat$NoHighSchool)
 dat <- dat %>%
   mutate(
     UnemploymentRate = UnemploymentRate*100,
-    NoHightSchool = NoHightSchool*100
+    NoHighSchool = NoHighSchool*100
   )
-  
+
+# we can begin by drawing a scatterplot with the percentage of unemployed people an y and percentage of adult without highschool on x
+
+p1 <- ggplot(dat, aes(y = UnemploymentRate, x = NoHighSchool)) + # basic plot instructions
+  geom_point( # make it a scatterplot
+    color = "chartreuse3", # make the points 'chartreuse'
+    alpha = 0.5, # make the points semi-transparent
+    shape = 19) + # make the points circles
+  labs(x =  "Adults without High School education (%)", y = "Unemployment (%)") + # axis labels
+  theme_bw() # simplistic theme
+
+p1
+
+# what is the assosciation between unemploymet rate and lack of high school education?
+
+# to answer that question formally we will run linear regressiion using lm()
+
+model1 <- lm(UnemploymentRate ~ NoHighSchool, #formula
+             data = dat) # dataset
+summary(model1)
+
+# Now let's add a regression line to the scatter plot using the geom_smooth function.
+
+# add the geom_smooth() funciton to add the regression line
+p1 + geom_smooth(method = "lm", # line should be fit as a linear model
+                 color = "hotpink4", 
+                 se = FALSE) # hide the confidence intervals

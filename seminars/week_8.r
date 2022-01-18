@@ -16,3 +16,14 @@ dat <- dat %>%
     UnemploymentRate = PctUnemployed,
     NoHighSchool = PctNotHSGrad
   )
+# summarize the variables, boths masured as proportions
+summary(dat$UnemploymentRate)
+summary(dat$NoHighSchool)
+
+# will be easier to interpre tohe regression output if we convert these to percentages rather than proportions 
+dat <- dat %>%
+  mutate(
+    UnemploymentRate = UnemploymentRate*100,
+    NoHightSchool = NoHightSchool*100
+  )
+  

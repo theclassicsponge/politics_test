@@ -1,0 +1,34 @@
+---
+title: 'Final Take Home Exam 2022  '
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+## Part 1: Determinants of Voter Turnout
+
+#### What is the null hypothesis for the β3 term in model 2?
+
+The null hypothesis for β3 is that the Gini index of disposable income does not have an effect on voter turnout.
+
+
+#### 2) Interpret the effects of electoral competition (i.e. a change in government) on turnout using the coefficients from models 1 and 2.
+
+The coefficients for the 
+
+#### 3) Based on model 2, what is the expected level of turnout for a country with the following characteristics?
+
+##### • A) A county with a new government, with a level of expenditure in education of 4% of the GDP, with a GINI of 40% and an effective number of parties of 5
+
+##### • B) A county with an old government, with a level of expenditure in education of 4% of the GDP, with a GINI of 40% and an effective number of parties of 5
+
+##### • C) A county with a new government, with a level of expenditure in education of 8% of the GDP, with a GINI of 40% and an effective number of parties of 5
+
+##### • D) A county with an old government, with a level of expenditure in education of 8% of the GDP, with a GINI of 40% and an effective number of parties of 5
+
+## Part 2: Predicting the Black Live Matters protests
+
+
+## Code:
